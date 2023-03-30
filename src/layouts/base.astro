@@ -1,0 +1,29 @@
+---
+interface Props {
+  title: string;
+}
+
+const { title } = Astro.props;
+---
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width" />
+    
+    <meta name="title" content="Orzle Technology Best Software Company In Kolkata ">
+    <meta name="description" content="ORZLE is a tech company in Kolkata that offers website development, software development, app development, digital marketing, branding & graphic designing">
+    <meta name="keywords" content="website development, digital marketing, graphic design, branding, kolkata">
+    <meta name="robots" content="index, follow">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="language" content="English">
+    
+    <meta name="generator" content={Astro.generator} />
+    
+    <title>{title} - We're Orzle</title>
+  </head>
+  <body>
+    <slot />
+  </body>
+</html>

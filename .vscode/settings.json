@@ -1,0 +1,32 @@
+{
+  "editor.fontFamily": "'ellograph cf', monospace",
+  "editor.fontLigatures": true,
+  "editor.foldingHighlight": false,
+  "editor.fontSize": 14.5,
+  "editor.lineHeight": 1.25,
+  "editor.tabSize": 2,
+  "editor.renderLineHighlight": "gutter",
+  "editor.formatOnSave": true,
+  "emmet.includeLanguages": {
+    "astro": "html"
+  },
+  "editor.quickSuggestions": {
+    "strings": true
+  },
+
+  "files.autoSave": "afterDelay",
+  "files.watcherExclude": {
+    "**/.git/objects/**": true,
+    "**/.git/subtree-cache/**": true,
+    "**/node_modules/**": true
+  },
+  "search.followSymlinks": false,
+
+  // scss
+  "scss.lint.unknownAtRules": "ignore",
+
+  "[astro]": {
+    "editor.defaultFormatter": "astro-build.astro-vscode",
+    "editor.formatOnSave": true
+  }
+}
