@@ -1,9 +1,9 @@
----
-import Layout from "../layouts/base.astro";
----
+<script setup lang="ts"></script>
 
-<Layout title="Home">
-  <section
+<template>
+
+<main>
+    <section
   class="
     flex flex-col
     gap-4
@@ -81,7 +81,7 @@ import Layout from "../layouts/base.astro";
   </div>
 
   <div class="relative w-full h-auto md:w-1/2 bg-white flex items-center sm:justify-end">
-    <img class="object-cover" src="mobile-app.svg" alt="mobile" />
+    <img class="object-cover" src="/mobile-app.svg" alt="mobile" />
   </div>
 </section>
 
@@ -149,5 +149,8 @@ import Layout from "../layouts/base.astro";
     </div>
   </div>
 </footer>
+</main>
+</template>
 
-</Layout>
+<style scoped>
+</style>
