@@ -1,0 +1,66 @@
+---
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout title="Welcome">
+  <section>
+    <div class="content-wrapper">
+      <h1>
+        Crafting modern digital solutions for
+        <span><i>brands that stand out</i></span>
+        in the crowd.
+      </h1>
+
+      <p>
+        At ORZLE, we are creating a smarter future with smarter IT solutions. We
+        believe in the power of technology to innovate & inspire. Join us in our
+        mission for a better tomorrow!
+      </p>
+
+      <p>
+        <span>#OrzleTechnology</span>
+        <span>#InnovativeTechnology</span>
+        <span>#SmarterSolutions</span><br />
+        The state-of-the-art IT solutions we provide can help businesses stand out
+        in a competitive market. Web development, software development, app development
+        and advancements, digital marketing, branding & graphic design are among
+        our digital services that ensure your business stands out. Our goal is to
+        create a personalized experience for your customers by providing the best-in-class
+        service.
+      </p>
+    </div>
+
+    <div class="flex p-4 items-center justify-center sm:p-6">
+      <img class="object-cover" src="/mobile-app.svg" alt="mobile" />
+    </div>
+  </section>
+</Layout>
+
+<style lang="scss">
+  .content-wrapper {
+    @apply flex flex-col max-w-xl p-4 gap-6 sm:p-6;
+
+    h1 {
+      @apply font-body font-extrabold leading-none
+         text-2xl text-cool-gray-700
+        sm:text-3xl md:text-5xl;
+
+      span {
+        @apply text-primary-500;
+      }
+    }
+
+    P {
+      @apply font-sans text-blue-gray-500 lg:text-lg;
+
+      span {
+        @apply text-primary-500;
+      }
+    }
+  }
+
+  section {
+    @apply flex flex-col mx-auto max-w-screen-xl my-8
+      gap-8 items-center justify-center md:flex-row;
+  }
+</style>

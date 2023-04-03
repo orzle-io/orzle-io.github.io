@@ -1,7 +1,7 @@
+import { defineConfig } from "windicss/helpers";
 
-
-module.exports = {
-  content: ["./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}"],
+export default defineConfig({
+  content: ["./src/**/*.{astro,html,js,md,mdx,ts,vue}"],
   theme: {
     extend: {
       colors: {
@@ -20,9 +20,9 @@ module.exports = {
       },
     },
     fontFamily: {
-      body: ["Noto Sans", "ui-sans-serif", "system-ui"],
-      sans: ["Noto Sans", "ui-sans-serif", "system-ui"],
+      body: ["Changa"],
+      sans: ["Mulish"],
     },
   },
   plugins: [],
-};
+});
