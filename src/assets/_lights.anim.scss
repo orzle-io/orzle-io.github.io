@@ -1,0 +1,93 @@
+.lights {
+  animation: 2s ease-out 0s 1 initial-transition;
+}
+.head {
+  animation: head 10s infinite linear;
+}
+.light-1 {
+  animation: light-lr 12s 0s infinite linear;
+}
+.light-2 {
+  animation: light-tb 11s 0s infinite linear;
+}
+.light-3 {
+  animation: light-bt 15s 0s infinite linear;
+}
+.light-4 {
+  animation: light-lr 16s 0s infinite linear;
+}
+.light-5 {
+  animation: light-tb 20s 0s infinite linear;
+}
+.light-6 {
+  animation: light-bt 12s 0s infinite linear;
+}
+.light-7 {
+  animation: light-rl 15s 0s infinite linear;
+}
+.light-8 {
+  animation: light-rl 13s 0s infinite linear;
+}
+.light-9 {
+  animation: light-tb 10s 0s infinite linear;
+}
+.light-10 {
+  animation: light-tb 22s 0s infinite linear;
+}
+
+@keyframes head {
+  0% {
+    transform: scale(1.1);
+  }
+  50% {
+    transform: scale(1.6);
+  }
+  100% {
+    transform: scale(1.1);
+  }
+}
+
+@keyframes light-lr {
+  0% {
+    transform: translateX(-110vw);
+  }
+  100% {
+    transform: translateX(150vw);
+  }
+}
+
+@keyframes light-rl {
+  0% {
+    transform: translateX(110vw);
+  }
+  100% {
+    transform: translateX(-150vw);
+  }
+}
+
+@keyframes light-tb {
+  0% {
+    transform: translateY(-70vh);
+  }
+  100% {
+    transform: translateY(80vh);
+  }
+}
+
+@keyframes light-bt {
+  0% {
+    transform: translateY(80vh);
+  }
+  100% {
+    transform: translateY(-70vh);
+  }
+}
+
+@keyframes initial-transition {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
