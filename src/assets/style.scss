@@ -1,0 +1,111 @@
+@use "sass:color";
+@use "./lights.anim";
+
+/* colors:primary */
+$primary-h: 214;
+$primary-s: 25%;
+$primary-l: 5%;
+
+/* colors:secondary */
+$secondary-h: $primary-h;
+$secondary-s: $primary-s;
+$secondary-l: 100 - $primary-l;
+
+/* colors:tertiary */
+$tertiary-h: $primary-h + 180;
+@if $tertiary-h > 360 {
+  $tertiary-h: $tertiary-h - 360;
+}
+$tertiary-l: calc(($primary-l + $secondary-l) / 2);
+
+/* colors:quaternary or analogous to primary (alt-1, alt-2) */
+$alt-1-h: $primary-h - 60;
+$alt-2-h: $primary-h + 60;
+// $alt-l: ($primary-l + $secondary-l) / 2;
+$alt-l: 80%;
+
+/* colors:accent */
+$accent-h: $primary-h + 120;
+@if $accent-h > 360 {
+  $accent-h: $accent-h - 360;
+}
+$accent-s: 100 - $primary-s;
+$accent-l: 80%;
+
+// brand colors
+$primary: $primary-h, $primary-s, $primary-l;
+$secondary: $secondary-h, $secondary-s, $secondary-l;
+$accent:
+  $accent-h,
+  $accent-s,
+  100% - $accent-l;
+$tertiary: $tertiary-h, $primary-s, $tertiary-l;
+$alt-1: $alt-1-h, $primary-s, $alt-l;
+$alt-2: $alt-2-h, $primary-s, $alt-l;
+
+// @debug "primary: #{$primary} secondary: #{$secondary} \
+//   accent: #{$accent} tertiary: #{$tertiary} \
+//   alt-1: #{$alt-1} alt-2: #{$alt-2} s2: #{$s2}";
+
+// light mode
+:root {
+  --bg: #{$secondary};
+  --primary: #{$primary};
+  --accent: #{$accent};
+  --tertiary: #{$tertiary};
+  --alt-1: #{$alt-1};
+  --alt-2: #{$alt-2};
+
+  --bg-gradient: linear-gradient(
+    -45deg,
+    hsl(#{$alt-2}) 5%,
+    hsl(#{$secondary}) 50%
+  );
+}
+
+// dark mode
+// $primary: $h, 100%, 50%;
+$primary:
+  $primary-h,
+  $primary-s,
+  100 - $primary-l;
+$secondary:
+  $secondary-h,
+  $secondary-s,
+  100 - $secondary-l;
+$accent: $accent-h, $accent-s, $accent-l;
+
+.dark {
+  --bg: #{$secondary};
+  --primary: #{$primary};
+  --accent: #{$accent};
+  --tertiary: #{$tertiary};
+  --alt-1: #{$alt-1};
+  --alt-2: #{$alt-2};
+
+  --bg-gradient: linear-gradient(
+    -45deg,
+    hsl(#{$alt-2}) 5%,
+    hsl(#{$secondary}) 50%
+  );
+}
+
+// extra colors
+$extra-violetish: 230, 75%, 80%;
+$extra-greenish: 172, 75%, 80%;
+$extra-yellowish: 25, 75%, 80%;
+
+:root {
+  --extra-violetish: #{$extra-violetish};
+  --extra-greenish: #{$extra-greenish};
+  --extra-yellowish: #{$extra-yellowish};
+}
+
+body {
+  background-color: hsl(var(--bg));
+  transition:
+    background-color 500ms ease-in-out,
+    color 500ms ease-in-out;
+
+  @apply grid grid-rows-[auto_1fr_auto] min-h-screen;
+}
