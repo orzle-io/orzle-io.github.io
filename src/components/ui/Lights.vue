@@ -136,6 +136,10 @@
 .light-8__line {
   @apply top-32 left-[70%] rotate-180 h-1 md:h-2 w-[30rem]
     from-brand-alt-2;
+
+  &_head {
+    @apply bg-brand-alt-2;
+  }
 }
 .light-9__line {
   @apply top-64 left-[65%] transform rotate-90 h-1 md:h-2 w-[30rem]
